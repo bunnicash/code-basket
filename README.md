@@ -1,0 +1,13 @@
+# Code Basket
+
+### About
+A collection of bits and pieces such as C++ Minigames, SDL and OpenGL projects, primitive Python ML concepts, shell scripts for testing... <br><br>
+
+### Compiling Minigames
+- Using G++ Linux: `g++ -o NAME FILE.cpp`
+- Windows with MinGW: `x86_64-w64-mingw32-g++ -o NAME.exe FILE.cpp -static`
+
+### Compiling SDL Programs
+- `g++ FILE.cpp -o NAME -lSDL2 -ldl`
+- `g++ FILE.cpp glad/src/glad.c -I./glad/include -o NAME -lSDL2 -ldl`
+- Alternatively, see the individual .cpp files (e.g for OpenGL things)
