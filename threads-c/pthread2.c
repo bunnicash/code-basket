@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 pthread_mutex_t aLock;    // mutex locks and unlocks will fail without it, "aLock undeclared"
-volatile long int a = 0;  // volatile = it'll change when it's running (long int: https://en.wikipedia.org/wiki/C_data_types)
+long int a = 0;           // long int: https://en.wikipedia.org/wiki/C_data_types
 
 void threadFunc1(void *arg) {
     int i;
@@ -34,7 +34,7 @@ void threadFunc2(void *arg) {
     pthread_mutex_unlock(&aLock);
 }
 
-int main(int argc, char **argv) {  // This will now properly add "a" now
+int main(int argc, char **argv) {  // This will properly add "a" now
     pthread_t one, two;            // Thread names
     int i;
     a = 0;

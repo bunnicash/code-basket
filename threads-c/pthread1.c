@@ -5,7 +5,8 @@
 #include <pthread.h>
 #include <unistd.h>
 
-volatile long int a = 0;  // volatile = it'll change when it's running (long int: https://en.wikipedia.org/wiki/C_data_types)
+volatile long int a = 0;  // volatile: it'll change when it's running, "every access should go through a loadstore", but still no thread safety
+                          // long int: https://en.wikipedia.org/wiki/C_data_types
 
 void threadFunc1(void *arg) {
     int i;
